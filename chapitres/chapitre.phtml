@@ -1,0 +1,15 @@
+<?php if($chpId === false):
+  header('Location: ../404.php');      
+?>
+
+<?php else:?>
+	<?php include('headerChp.phtml');?>
+
+	<h1><?= $chpTitre['titre'] ?></h1>
+	<img src="../parties/img/<?= $chpImage['image'] ?>">
+	</br>
+	<p><?= $chpHtml['html'] ?></p>
+
+	<?php include('footerChp.phtml');?>
+	
+<?php endif?>  
