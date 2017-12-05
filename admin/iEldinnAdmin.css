@@ -1,0 +1,441 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans'); 
+*{ 
+  margin:0;
+  padding:0;
+}
+
+html,body{
+  height: 100%;
+  width: 100%;
+  background-color: #f3ddbe;
+  font-family: 'Josefin Sans', sans-serif;
+  color: #262024;
+}
+.clear{
+	clear: both;
+}
+
+li{
+	list-style-type: none;
+}
+header{
+	width: 1000px;
+	margin: 0 auto;
+}
+header li{
+	display: inline-block;
+	border-right: 1px solid #262125;
+	padding-right: 5px;
+	font-variant: small-caps;
+}
+header li a{
+	color: #262125;
+	text-decoration: none;
+}
+header li a:hover{
+	color: #e31051;
+}
+
+main{
+	width: 1000px;
+	min-height: 70%;
+	margin: 0 auto;
+
+}
+a{
+	color: #262125;
+	text-decoration: none;
+}
+a:hover{
+	color: #e31051;
+}
+a:focus{
+	color: #e31051;
+}
+
+
+h2{
+	color: #2d2466;
+	font-size: 30px;
+	/*text-transform: uppercase;*/
+	/*font-variant: small-caps;*/
+	padding-top: 35px;
+	padding-bottom: 2%;
+}
+h3{
+	font-variant: small-caps;
+	/*display: inline-block;*/
+}
+h4{
+	font-variant: small-caps;
+}
+
+h3 a{
+	width: 180px;
+	display: inline-block;
+	/*float: right;*/
+	/*margin: 5px;*/
+	padding: 10px 10px;
+	background-color: #51464b;
+	border-radius: 12px;
+	color: #fccfc0;
+	text-align: center;
+	text-decoration: none;
+}
+h3 a:hover{
+	color: #fefad8;
+	background-color: #f68e6c;
+}
+
+img{
+	width: 30%;
+}
+.tAdmin{
+	width: 50%;
+}
+/*.titreAdmin{
+	color: #DD4B49;
+	font-family: sans-serif;
+	margin-top: -90px;
+	padding-left: -30px;
+}*/
+
+table{
+border-collapse:collapse;
+width:100%;
+text-align:center;
+}
+
+table th a:link{
+	color : #FCCFC0;
+}
+table a:hover{
+	color : #FF472B;
+}
+
+
+
+/*Tableau*/
+table,th, td{
+border: 1px solid gray;
+}
+
+th, td{
+height: 15px;
+width: 15%;
+padding:6px;
+vertical-align:middle;
+}
+
+th{
+background-color: #FDFCFC;
+}
+table img{
+	width: 50%;
+	margin-left: 50;
+}
+.paginationAdmin{
+	display: block;
+	margin-top: 5%;
+}
+.actionAdmin{
+	width:30%;
+	margin-right: 5%;
+	margin-left: 5%;
+}
+/*form label {
+	display: inline-block;
+	width: 100px;
+	padding: 5px;
+}
+*/
+
+footer{
+	width: 100%;
+	height: 50px;
+	/*position: absolute;*/
+	bottom: 0;
+
+	text-align: center;
+	padding-top: 2%; 
+}
+footer p{
+	padding: 1%;
+	background-color: #e31051;
+}
+
+
+
+
+.pagination li{
+	display: inline-block;
+/*	padding: 10px;
+	border-radius: 10px;
+	background-color: #e31051;
+	color: #fccfc0;
+	text-decoration: none;*/
+}
+.pagination a{
+	/*display: inline-block;*/
+	padding: 5px 10px;
+	border-radius: 10px;
+	background-color: #ED7A91;
+	color: #fccfc0;
+	text-decoration: none;
+}
+.pagination a:hover, .pagination a:focus{
+	background-color: #fefad8;
+}
+.activeLivreOr{
+	color: #ee7a91 !important;
+	background-color: #FEFAD8 !important;
+}
+
+.options li{
+	display: inline-block;
+	border-right: 1px solid #262125;
+	padding-right: 5px;
+	/*font-variant: small-caps;*/
+}
+.options li a{
+	color: #262125;
+	text-decoration: none;
+}
+.options li a:hover{
+	color: #e31051;
+}
+
+
+/********************* FORM *******************************/
+.formStyle{
+    /*width: 60%;*/
+    margin: 0 auto;
+    padding-bottom: 5%;
+}
+.formStyle label{
+    display:inline-block;
+    margin-bottom: 10px;
+    width: 20%;
+}
+.formStyle label > span{
+    float: left;
+    width: 100px;
+    color: #F072A9;
+    font-weight: bold;
+    font-size: 13px;
+    text-shadow: 1px 1px 1px #fff;
+}
+.formStyle input{
+	/*width: 20%;*/
+}
+.formStyle fieldset{
+	    margin: 0 auto;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    margin: 0px 0px 10px 0px;
+    border: 1px solid #F3D6AA;
+    padding: 20px;
+    background: #FFC6B7;
+    box-shadow: inset 0px 0px 15px #FFE5E5;
+    -moz-box-shadow: inset 0px 0px 15px #FFE5E5;
+    -webkit-box-shadow: inset 0px 0px 15px #FFE5E5;
+}
+.formStyle textarea{
+    width:250px;
+    height:100px;
+}
+.formStyle input[type=text],
+.formStyle input[type=email],
+.formStyle select,
+.formStyle textarea{
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border: 1px solid #FFC2DC;
+    outline: none;
+    color: #F072A9;
+    padding: 5px 8px 5px 8px;
+    box-shadow: inset 1px 1px 4px #FFD5E7;
+    -moz-box-shadow: inset 1px 1px 4px #FFD5E7;
+    -webkit-box-shadow: inset 1px 1px 4px #FFD5E7;
+    background: #FFEFF6;
+    width:70%;
+}
+.formStyle  input[type=submit],
+.formStyle  input[type=button]{
+    background: #ed7a91;
+    border: 1px solid #EF97BD;
+    padding: 5px 15px 5px 15px;
+    color: #fefad8;
+    border-radius: 10px;
+/*    box-shadow: inset 0px 0px 5px #FEFAD8;
+    -moz-box-shadow: inset 0px 0px 5px #FEFAD8;
+    -webkit-box-shadow: inset 0px 0px 5px #FEFAD8;
+    border-radius: 3px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;  */ 
+    font-weight: bold;
+}
+.formStyle  input[type=submit]:hover,
+.formStyle  input[type=button]:hover{
+	cursor:  pointer;
+	background: #EB3B88;
+    color: #FFCBE2;
+}
+
+
+
+/********************* BOUTON *******************************/
+
+
+.boutonOr a{
+	padding: 1% 3%;
+	margin: 1% 0%;
+	border: 1px solid #fefad8;
+	border-radius: 10px;
+	background-color: #b79262;
+	-webkit-box-shadow: 0px 0px 0px 3px #b79262;
+    -moz-box-shadow: 0px 0px 0px 3px #b79262;
+    box-shadow: 0px 0px 0px 3px #b79262;
+    transition-property:background-color, box-shadow;
+	transition-duration: 0.5s, 0.5s;
+}
+.boutonOr a:hover, .boutonOr a:focus{
+	background-color: #FFAA91;
+    -webkit-box-shadow: 0px 0px 0px 3px #FFAA91;
+    -moz-box-shadow: 0px 0px 0px 3px #FFAA91;
+    box-shadow: 0px 0px 0px 3px #FFAA91;
+}
+
+
+/********************** TABLEAU **********************************/
+
+.tableauAdmin{
+	position: relative;
+	margin-top: 5%;
+	padding-bottom: 2%;
+	background: white;
+  	border-radius:3px;
+  	border-collapse: collapse;
+  	padding:5px;
+  	width: 100%;
+	text-align:center;
+  	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+#tableauClient{
+	margin-left: -18%;
+}
+
+.tableauAdmin th {
+  color:#fccfc0;
+  background:#262024;
+  border-bottom:4px solid #9ea7af;
+  border-right: 1px solid #343a45;
+  font-size:23px;
+  font-weight: 100;
+  padding:24px;
+  text-align:left;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  vertical-align:middle;
+}
+
+.tableauAdmin th:first-child {
+  border-top-left-radius:3px;
+}
+ 
+.tableauAdmin th:last-child {
+  border-top-right-radius:3px;
+  border-right:none;
+}
+  
+.tableauAdmin tr {
+/*  border-top: 1px solid #C1C3D1;
+  border-bottom-: 1px solid #C1C3D1;*/
+  color:#666B85;
+  font-size:16px;
+  font-weight:normal;
+  text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
+}
+ 
+ 
+.tableauAdmin tr:first-child {
+  border-top:none;
+}
+
+.tableauAdmin tr:last-child {
+  border-bottom:none;
+}
+ 
+.tableauAdmin tr:nth-child(odd) td {
+  background:#FFFDED;
+}
+ 
+
+.tableauAdmin tr:last-child td:first-child {
+  border-bottom-left-radius:3px;
+}
+ 
+.tableauAdmin tr:last-child td:last-child {
+  border-bottom-right-radius:3px;
+}
+ 
+.tableauAdmin td {
+  background:#fff0e1;
+  padding:20px;
+  text-align:left;
+  vertical-align:middle;
+  font-weight:300;
+  font-size:18px;
+  text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+  /*border-right: 1px solid #C1C3D1;*/
+}
+
+.tableauAdmin td:last-child {
+  border-right: 0px;
+}
+
+
+/***********************************EVENTS  *****/
+.eventsAdmin li{
+	position: relative;
+}
+
+.eventsAdmin li{
+	position: relative;
+	padding: 2%;
+	margin:3% 0%;
+	border-radius: 10px;
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f9f5e3+0,f7edb9+42,ffffff+100&1+0,0+58 */
+	background: -moz-radial-gradient(center, ellipse cover, rgba(249,245,227,1) 0%, rgba(247,237,185,0.28) 42%, rgba(249,242,204,0) 58%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+	background: -webkit-radial-gradient(center, ellipse cover, rgba(249,245,227,1) 0%,rgba(247,237,185,0.28) 42%,rgba(249,242,204,0) 58%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: radial-gradient(ellipse at center, rgba(249,245,227,1) 0%,rgba(247,237,185,0.28) 42%,rgba(249,242,204,0) 58%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f5e3', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: 200% 200%;
+	font-size: 2vh;
+}
+.eventsAdmin img, .eventAdminUnique img{
+	width: 50%;
+}
+.eventsAdmin h3{
+	color: #ec4869;
+}
+
+.eventAdminUnique{
+	position: relative;
+	padding: 2%;
+	margin:3% 0%;
+	border-radius: 10px;
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f9f5e3+0,f7edb9+42,ffffff+100&1+0,0+58 */
+	background: -moz-radial-gradient(center, ellipse cover, rgba(249,245,227,1) 0%, rgba(247,237,185,0.28) 42%, rgba(249,242,204,0) 58%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+	background: -webkit-radial-gradient(center, ellipse cover, rgba(249,245,227,1) 0%,rgba(247,237,185,0.28) 42%,rgba(249,242,204,0) 58%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: radial-gradient(ellipse at center, rgba(249,245,227,1) 0%,rgba(247,237,185,0.28) 42%,rgba(249,242,204,0) 58%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f5e3', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: 200% 200%;
+	font-size: 2vh;
+}
