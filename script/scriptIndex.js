@@ -197,7 +197,6 @@ smoothScroll.init();
 
 		// build scene
 		var sceneBulleA = new ScrollMagic.Scene({triggerElement: '#repereBulle1'})
-						.addIndicators({name: "bulle1"})
 						.setTween(tweenBulleA)
 						.addTo(controller);
 	});
@@ -212,7 +211,6 @@ smoothScroll.init();
 
 		// build scene
 		var sceneBulleB = new ScrollMagic.Scene({triggerElement: '#repereBulle2'})
-						.addIndicators({name: "bulle2"})
 						.setTween(tweenBulleB)
 						.addTo(controller);
 	});
@@ -228,7 +226,6 @@ smoothScroll.init();
 
 		// build scene
 		var sceneBulleC = new ScrollMagic.Scene({triggerElement: '#repereBulle3'})
-						.addIndicators({name: "bulle3"})
 						.setTween(tweenBulleC)
 						.addTo(controller);
 	});
@@ -244,7 +241,6 @@ smoothScroll.init();
 
 		// build scene
 		var sceneBulleD = new ScrollMagic.Scene({triggerElement: '#repereBulle4'})
-						.addIndicators({name: "bulle4"})
 						.setTween(tweenBulleD)
 						.addTo(controller);
 	});
