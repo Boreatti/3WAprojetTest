@@ -2,7 +2,7 @@ allow from all
 
 Options -Indexes
 #Personnalisation de l'erreur 404
-#exemple si on tape : "http://localhost/wonder/blig.php"
+#exemple si on tape : "/eldinnWorld-PHP/public_html/blig.php"
 #il faut mettre le chemin complet depuis la racine du serveur apache
 ErrorDocument 404 /404.php
 
