@@ -20,11 +20,11 @@ include('creationModification.php');
 
 <h2>Chapitre Acutel</h2>
 <div>
-	<h3><?= $chpTitre['titre'] ?></h3>
-	<h4>Dans la partie <?= $chpPartie['partie'] ?></h4>
+	<h3><?= $chp['titre'] ?></h3>
+	<h4>Dans la partie <?= $chp['partie'] ?></h4>
 	<br/>
-	<img  src="../parties/img/<?= $chpImage['image'] ?>" />
-	<p><?= $chpHtml['html'] ?></p>
+	<img  src="../parties/img/<?= $chp['image'] ?>" />
+	<p><?= $chp['html'] ?></p>
 </div>
 <br/>
 <h2>Modification</h2>
@@ -43,9 +43,9 @@ include('creationModification.php');
 
 
 <?php else : ?>
-<p>Image actuelle : <?= $chpImage['image'] ?></p>
+<p>Image actuelle : <?= $chp['image'] ?></p>
 <br/>
-<img class="imageActuelle" src="../parties/img/<?= $chpImage['image'] ?>" />
+<img class="imageActuelle" src="../parties/img/<?= $chp['image'] ?>" />
 <br/>
 <form method="post" enctype="multipart/form-data" action=''>
 	<label for="field_titre">Charger une nouvelle image </label>
@@ -59,33 +59,34 @@ include('creationModification.php');
 
 		<label for="field_titre"><br/>Partie : </label>
 		<select name='partie'><?php foreach($allParties as $key => $partie):?> 
-			<option value="<?= $partie['numero'] ?>" <?php if (!empty($chp) && ($chpPartie['partie'] == $partie['numero'])){echo "selected='selected'";} ?>><?= $partie['numero'] ?> - <?= $partie['titre'] ?></option>
+			<option value="<?= $partie['numero'] ?>" <?php if (!empty($chp) && ($chp['partie'] == $partie['numero'])){echo "selected='selected'";} ?>><?= $partie['numero'] ?> - <?= $partie['titre'] ?></option>
 			<?php endforeach ?>
 		</select>
 		<br/>
 
 		<label for="field_titre"><br/>Titre : </label>
-		<input id="field_titre" type='text' name='titre' size='30' maxlength="255" value="<?= (empty($chp)) ? '' : $chpTitre['titre'] ?>"/>
+		<input id="field_titre" type='text' name='titre' size='30' maxlength="255" value="<?= (empty($chp)) ? '' : $chp['titre'] ?>"/>
 		<br/>
 
 		<label for="field_texte">HTML : </label>
-		<textarea id="field_texte" type='text' name='html' size='225' maxlength="255" value=""/><?= (empty($chpHtml['html'])) ? '' : $chpHtml['html'] ?></textarea>
+		<textarea id="field_texte" type='text' name='html' size='225' maxlength="255" value=""/><?= (empty($chp['html'])) ? '' : $chp['html'] ?></textarea>
 		<br/>
 
 		<label for="field_texte">CSS : </label>
-		<textarea id="field_texte" type='text' name='css' size='225' maxlength="255" value=""/><?= (empty($chpCss['css'])) ? '' : $chpCss['css'] ?></textarea>
+		<textarea id="field_texte" type='text' name='css' size='225' maxlength="255" value=""/><?= (empty($chp['css'])) ? '' : $chp['css'] ?></textarea>
 		<br/>
 
 
-		<input type="hidden" name='id' value="<?= (empty($chp)) ? ' ' : $chpId['id']?>"/>
+		<input type="hidden" name='id' value="<?= (empty($chp)) ? ' ' : $chp['id']?>"/>
 		
 
 		<?php if(empty($chp)): ?>
 		<input id="field_title" type="submit" value="Ajouter"/>
-		<input type="button" name="annuler" onclick="window.location.replace('index.php')" value="Annuler" />
+		<input type="button" name="annuler" value="Annuler" />
 		<?php else: ?>
 		<input id="field_title" type="submit" value="Modifier"/>
-		<input type="button" name="annuler" onclick="window.location.replace('partie.php?id=<?= $chpPartie["partie"] ?>')" value="Annuler" />
+		<!-- <input type="button" name="annuler" value="Annuler" /> -->
+		<input type="button" name="annuler" onclick="window.location.replace('partie.php?id=<?= $chp['partie'] ?>')" value="Annuler" />
 		<?php endif ?>
 	</form>
 </div>
