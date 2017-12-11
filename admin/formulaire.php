@@ -9,12 +9,7 @@ $erreur='';
 		    if(is_numeric($_GET['id'])){
 		        // on tente de charger les elements du chapitre
 				$chpId = getChp($_GET['id']);
-				$chp = getChp('*');
-				// $chpPartie = getChp('partie');
-				// $chpTitre = getChp('titre');
-				// $chpImage = getChp('image');
-				// $chpHtml = getChp('html');
-				// $chpCss = getChp('css');        
+				$chp = getChp('*');      
 		    }
 		    else{
 		        $erreur = 'Oups ! Ce chapitre n existe pas : chapitre ' . $_GET['id'];
