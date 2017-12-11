@@ -5,12 +5,11 @@ include('views/headerAdmin.php');
 
 <?php
 // var_dump($_GET);
+$messErreur = "";
 
 if(isset($_GET['id']) && is_numeric($_GET['id'])){
 	$chpId = getChp($_GET['id']);
 	$chp = getChp('*');
-
-}
 
 	if(isset($_POST['suppr'])){
 		
@@ -23,9 +22,10 @@ if(isset($_GET['id']) && is_numeric($_GET['id'])){
 					header("location: partie.php?id=". $chp['partie']);
 				}		
 	} 
+}
 
 else{
-	echo "<br/> Oups ! Pas de chapitre.";
+	$messErreur = "<br/> Oups ! Pas de chapitre.";
 }
 
 
