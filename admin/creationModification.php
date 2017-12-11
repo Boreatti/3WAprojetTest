@@ -28,7 +28,7 @@ if(!empty($_POST)){
 			//si le nom de l'image est different d'une chaine vide alors il inserera li'mage uploadée
 			if($_FILES['image']['name'] != ''){
 				$imageOK = $_FILES['image']['name'];
-				$query = 'UPDATE `eldinn3wa`.`chapitre` 
+				$query = 'UPDATE `chapitre` 
 						  SET `partie` = '.$db->quote($_POST["partie"]).', 
 						  	  `titre` = '.$db->quote($_POST["titre"]).', 
 							  `html` = '.$db->quote($_POST["html"]). ', 
@@ -41,7 +41,7 @@ if(!empty($_POST)){
 			}
 			//sinon il fera la meme chose mais sans l'image
 			else{
-				$query = 'UPDATE `eldinn3wa`.`chapitre` 
+				$query = 'UPDATE `chapitre` 
 						  SET `partie` = '.$db->quote($_POST["partie"]).', 
 						      `titre` = '.$db->quote($_POST["titre"]).', 
 							  `html` = '.$db->quote($_POST["html"]). ', 
@@ -59,7 +59,7 @@ if(!empty($_POST)){
 			//rectification du dossier source des img
 			$imageOK = $_FILES['image']['name'];
 			//j'insère en base			
-			$query = 'INSERT INTO `eldinn3wa`.`chapitre` (`partie`, `titre`, `html`, `css`, `image`, `date`)';
+			$query = 'INSERT INTO `chapitre` (`partie`, `titre`, `html`, `css`, `image`, `date`)';
 			$query .= 'VALUES ('.$db->quote($_POST["partie"]).','.$db->quote($_POST["titre"]).','.$db->quote($_POST["html"]).','.$db->quote($_POST["css"]).','.$db->quote($imageOK).',NOW());';
 		}
 
@@ -67,10 +67,10 @@ if(!empty($_POST)){
 		var_dump($query);
 		$resultat_insert = $db->exec($query);
 		// echo $resultat_insert . "<br/>Resultat : ";
-		// var_dump($resultat_insert);
+		var_dump($resultat_insert);
 		
 		if($resultat_insert == 1){
-			header("location: partie.php?id=". $chpPartie['partie']);
+			header("location: partie.php?id=".$db->quote($_POST["partie"]));
 		}
 		else{
 			if(isset($_POST['id']) && is_numeric($_POST['id'])){
