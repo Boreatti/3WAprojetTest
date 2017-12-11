@@ -8,13 +8,13 @@ $erreur='';
 		    // on vérifie s'assure que l'id ne va pas au dela de 6
 		    if(is_numeric($_GET['id'])){
 		        // on tente de charger les elements du chapitre
-				$chp = getChp($_GET['id']);
-				$chpId = getChp('id');
-				$chpPartie = getChp('partie');
-				$chpTitre = getChp('titre');
-				$chpImage = getChp('image');
-				$chpHtml = getChp('html');
-				$chpCss = getChp('css');        
+				$chpId = getChp($_GET['id']);
+				$chp = getChp('*');
+				// $chpPartie = getChp('partie');
+				// $chpTitre = getChp('titre');
+				// $chpImage = getChp('image');
+				// $chpHtml = getChp('html');
+				// $chpCss = getChp('css');        
 		    }
 		    else{
 		        $erreur = 'Oups ! Ce chapitre n existe pas : chapitre ' . $_GET['id'];
