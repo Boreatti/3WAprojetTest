@@ -13,7 +13,7 @@ if(isset($_GET['id']) && is_numeric($_GET['id'])){
 	if(isset($_POST['suppr'])){
 		
 			$query_delete = 'DELETE FROM `chapitre`
-							 WHERE `id` ='.$db->quote($chp['id']).';';
+							 WHERE `id` ='.$db->quote($_GET["id"]).';';
 			$resultat_delete = $db->exec($query_delete);
 			
 			if ($resultat_delete > 0) {
