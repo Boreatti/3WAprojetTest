@@ -1,6 +1,6 @@
 <?php include('headerAdmin.php'); ?>
 <main>	
-	<h2>Partie <?= $partNum['numero'] ?> - <?= $partTitre['titre'] ?> </h2>
+	<h2>Partie <?= $part['numero'] ?> - <?= $part['titre'] ?> </h2>
 
 	<h3><a href="formulaire.php">Nouveau chapitre</a> </h3>
 
