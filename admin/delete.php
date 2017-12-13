@@ -8,7 +8,6 @@ include('views/headerAdmin.php');
 $messErreur = "";
 
 if(isset($_GET['id']) && is_numeric($_GET['id'])){
-	$chpId = getChp($_GET['id']);
 	$chp = getChp('*');
 
 	if(isset($_POST['suppr'])){
