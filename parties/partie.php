@@ -15,7 +15,7 @@ $erreur='';
 		        
 		    }
 		    else{
-		        $erreur = 'Oups ! Cette partie n existe pas : partie ' . $_GET['id'];
+		        $erreur = "Oups ! Cette partie n'existe pas : partie " . $_GET['id'];
 		    }
 		}else{
 		    $erreur = 'Aucune partie séléctionnée :(';
