@@ -6,9 +6,9 @@ include('creationModification.php');
 
 <main class="main">
 
-<?php if(!empty($messErreur)): ?>
-<h2><?= $messErreur ?></h2>
-
+<?php if($erreur) : ?>
+ 	<h2><?= $erreur ?> </h2>
+ 
 <?php else : ?>
 	<?php if(empty($chp)): ?>
 	<h2>Creation</h2>
