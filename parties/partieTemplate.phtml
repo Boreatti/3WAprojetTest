@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8" />
-	<title><?=$partTitre['titre'] ?></title>
+	<title><?=$part['titre'] ?></title>
 
 	<link type="text/css" rel="stylesheet" href="menuParties.css" />
 	  <?php include('customCSS.phtml') ?>
@@ -15,7 +15,7 @@
 		******************************************************/
 		var p = 0;
 		$.arrPreload = [];
-		$.arrPreload[p++] = "<?=$partImg['image'] ?>";
+		$.arrPreload[p++] = "<?=$part['image'] ?>";
 		$.arrPreload[p++] = "img/bgMenus2.png"
 
 
@@ -40,8 +40,6 @@
 <body>
 
 <div id="oLoading"><div><img src="../img/loading5.gif" alt="Vous voyagez hors de la matière..." /></div></div> 
-<!-- <audio id="audioPlayer" src="<?=$partZik['musique'] ?>" ontrols loop="-1" autoplay></audio>
-<img id="controlSon" src="../img/iconSonActive.png" onclick="play('audioPlayer', this)"> -->
 </br></br>
 
 
@@ -52,10 +50,10 @@
          <h1><?= $erreur ?> </h1>
          <?php else : ?>
 		
-		<h1><?=$partTitre['titre'] ?> - Partie <?=$partNum['numero'] ?></h1>
+		<h1><?=$part['titre'] ?> - Partie <?=$part['numero'] ?></h1>
 		<p class="aPropos">A propos du lieu </p> 
-		<p class="desc"><span style="font-weight:bold;"><?=$partPropos['aPropos'] ?></span>
-		</br><?=$partDesc['description'] ?> </p>
+		<p class="desc"><span style="font-weight:bold;"><?=$part['aPropos'] ?></span>
+		</br><?=$part['description'] ?> </p>
 
 		 <nav class="navChapitres">
 			<ul>

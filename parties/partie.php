@@ -10,12 +10,7 @@ $erreur='';
 		    // on vérifie s'assure que l'id ne va pas au dela de 6
 		    if(($_GET['id']) < 6){
 		        // on tente de charger les elements de partie
-				$partId = getPartie('*');
-				$partNum = getPartie('numero');
-				$partTitre = getPartie('titre');
-				$partPropos = getPartie('aPropos');
-				$partDesc = getPartie('description');
-				$partImg = getPartie('image');
+				$part = getPartie('*');
 				$listeChpPartie = getChpPartie($_GET['id']); 
 		        
 		    }
