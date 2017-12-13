@@ -52,7 +52,7 @@
 
         $chpPartie = array();
         
-        $query = 'SELECT * FROM chapitre WHERE partie='.$partie.' ORDER BY `id` ASC';
+        $query = 'SELECT * FROM chapitre WHERE partie='.$db->quote($partie).' ORDER BY `id` ASC';
         $resultat = $db->query($query);
         $chpPartie = $resultat->fetchAll(); 
 
