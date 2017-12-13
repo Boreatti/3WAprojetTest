@@ -2,7 +2,12 @@
 <html>
 <head>
 	<meta charset="utf-8" />
-	<title><?=$part['titre'] ?></title>
+	<title><?php if($erreur) : ?> 
+			OUPS! 
+				<?php else : ?> 
+				<?= $part['titre'] ?>
+			<?php endif ?> 
+	</title>
 
 	<link type="text/css" rel="stylesheet" href="menuParties.css" />
 	  <?php include('customCSS.phtml') ?>
@@ -39,30 +44,35 @@
 
 <body>
 
-<div id="oLoading"><div><img src="../img/loading5.gif" alt="Vous voyagez hors de la matière..." /></div></div> 
+<?php if($erreur) : ?>
 </br></br>
-
-
 <div class="menuChapitres">
 	<div class="containChapitres">
-	
-		<?php if($erreur) : ?>
-         <h1><?= $erreur ?> </h1>
-         <?php else : ?>
-		
-		<h1><?=$part['titre'] ?> - Partie <?=$part['numero'] ?></h1>
-		<p class="aPropos">A propos du lieu </p> 
-		<p class="desc"><span style="font-weight:bold;"><?=$part['aPropos'] ?></span>
-		</br><?=$part['description'] ?> </p>
+ 		<h1><?= $erreur ?> </h1>
+ 
+ 	<?php else : ?>
+	<div id="oLoading"><div><img src="../img/loading5.gif" alt="Vous voyagez hors de la matière..." /></div></div> 
+	</br></br>
 
-		 <nav class="navChapitres">
-			<ul>
-			<?php foreach($listeChpPartie as $key => $chapitre):?> 
-				<li><a href='../chapitres/chapitre.php?id=<?= $chapitre['id'] ?>'><img src="img/<?= $chapitre['image'] ?>"></img> </br> <h2><?= $chapitre['titre'] ?></h2></a></li>
-			<?php endforeach ?>
-			</ul>
-		</nav>
-        <?php endif ?>  
+
+	<div class="menuChapitres">
+		<div class="containChapitres">
+		
+			
+			<h1><?=$part['titre'] ?> - Partie <?=$part['numero'] ?></h1>
+			<p class="aPropos">A propos du lieu </p> 
+			<p class="desc"><span style="font-weight:bold;"><?=$part['aPropos'] ?></span>
+			</br><?=$part['description'] ?> </p>
+
+			 <nav class="navChapitres">
+				<ul>
+				<?php foreach($listeChpPartie as $key => $chapitre):?> 
+					<li><a href='../chapitres/chapitre.php?id=<?= $chapitre['id'] ?>'><img src="img/<?= $chapitre['image'] ?>"></img> </br> <h2><?= $chapitre['titre'] ?></h2></a></li>
+				<?php endforeach ?>
+				</ul>
+			</nav>
+
+<?php endif ?>  
 <?php include('boutons.phtml');?>
 
 

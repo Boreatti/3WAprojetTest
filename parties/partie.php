@@ -6,7 +6,7 @@ include('../script/init.php');
 //Verification de l'id de la partie chargée 
 $erreur='';
  // on vérifie si on a bien une clef 'id' en GET
-		if(isset($_GET['id'])){
+		if(isset($_GET['id']) && is_numeric($_GET['id'])){
 		    // on vérifie s'assure que l'id ne va pas au dela de 6
 		    if(($_GET['id']) < 6){
 		        // on tente de charger les elements de partie
